@@ -1,3 +1,4 @@
+import { useState } from "react";
 import "./App.css";
 
 import profile from "./assets/Your Photo.png";
@@ -19,6 +20,7 @@ import internship2 from "./assets/Internship2.jpeg";
 import resume from "./assets/resume.pdf";
 
 function App() {
+  const [menuOpen, setMenuOpen] = useState(false);
   return (
     <div className="container">
 
@@ -29,16 +31,61 @@ function App() {
       {/* Navbar */}
 
       <nav className="navbar">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#education">Education</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#experience">Experience</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#certificates">Certificates</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+
+  <div
+    className="menu-icon"
+    onClick={() => setMenuOpen(!menuOpen)}
+  >
+    ☰
+  </div>
+
+  <ul className={menuOpen ? "nav-links active" : "nav-links"}>
+
+  <li>
+    <a href="#about" onClick={() => setMenuOpen(false)}>
+      About
+    </a>
+  </li>
+
+  <li>
+    <a href="#education" onClick={() => setMenuOpen(false)}>
+      Education
+    </a>
+  </li>
+
+  <li>
+    <a href="#skills" onClick={() => setMenuOpen(false)}>
+      Skills
+    </a>
+  </li>
+
+  <li>
+    <a href="#experience" onClick={() => setMenuOpen(false)}>
+      Experience
+    </a>
+  </li>
+
+  <li>
+    <a href="#projects" onClick={() => setMenuOpen(false)}>
+      Projects
+    </a>
+  </li>
+
+  <li>
+    <a href="#certificates" onClick={() => setMenuOpen(false)}>
+      Certificates
+    </a>
+  </li>
+
+  <li>
+    <a href="#contact" onClick={() => setMenuOpen(false)}>
+      Contact
+    </a>
+  </li>
+
+</ul>
+
+</nav>
 
       {/* Hero Section */}
 
