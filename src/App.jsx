@@ -20,7 +20,11 @@ import internship2 from "./assets/Internship2.jpeg";
 import resume from "./assets/resume.pdf";
 
 function App() {
+
   const [menuOpen, setMenuOpen] = useState(false);
+  const [selectedCertificate, setSelectedCertificate] = useState(null);
+  const [selectedProject, setSelectedProject] = useState(null);
+
   return (
     <div className="container">
 
@@ -32,60 +36,60 @@ function App() {
 
       <nav className="navbar">
 
-  <div
-    className="menu-icon"
-    onClick={() => setMenuOpen(!menuOpen)}
-  >
-    ☰
-  </div>
+        <div
+          className="menu-icon"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          ☰
+        </div>
 
-  <ul className={menuOpen ? "nav-links active" : "nav-links"}>
+        <ul className={menuOpen ? "nav-links active" : "nav-links"}>
 
-  <li>
-    <a href="#about" onClick={() => setMenuOpen(false)}>
-      About
-    </a>
-  </li>
+          <li>
+            <a href="#about" onClick={() => setMenuOpen(false)}>
+              About
+            </a>
+          </li>
 
-  <li>
-    <a href="#education" onClick={() => setMenuOpen(false)}>
-      Education
-    </a>
-  </li>
+          <li>
+            <a href="#education" onClick={() => setMenuOpen(false)}>
+              Education
+            </a>
+          </li>
 
-  <li>
-    <a href="#skills" onClick={() => setMenuOpen(false)}>
-      Skills
-    </a>
-  </li>
+          <li>
+            <a href="#skills" onClick={() => setMenuOpen(false)}>
+              Skills
+            </a>
+          </li>
 
-  <li>
-    <a href="#experience" onClick={() => setMenuOpen(false)}>
-      Experience
-    </a>
-  </li>
+          <li>
+            <a href="#experience" onClick={() => setMenuOpen(false)}>
+              Experience
+            </a>
+          </li>
 
-  <li>
-    <a href="#projects" onClick={() => setMenuOpen(false)}>
-      Projects
-    </a>
-  </li>
+          <li>
+            <a href="#projects" onClick={() => setMenuOpen(false)}>
+              Projects
+            </a>
+          </li>
 
-  <li>
-    <a href="#certificates" onClick={() => setMenuOpen(false)}>
-      Certificates
-    </a>
-  </li>
+          <li>
+            <a href="#certificates" onClick={() => setMenuOpen(false)}>
+              Certificates
+            </a>
+          </li>
 
-  <li>
-    <a href="#contact" onClick={() => setMenuOpen(false)}>
-      Contact
-    </a>
-  </li>
+          <li>
+            <a href="#contact" onClick={() => setMenuOpen(false)}>
+              Contact
+            </a>
+          </li>
 
-</ul>
+        </ul>
 
-</nav>
+      </nav>
 
       {/* Hero Section */}
 
@@ -112,7 +116,7 @@ function App() {
 
           <a
             href="https://www.linkedin.com/in/anjali-patel-04aaa5327"
-            target="_blank"
+            target="_self"
             rel="noreferrer"
             className="hero-btn"
           >
@@ -249,8 +253,6 @@ function App() {
             Websphere Solution | 3 Months
           </p>
 
-          <br />
-
           <h3>Full Stack Development Internship</h3>
 
           <p>
@@ -269,8 +271,10 @@ function App() {
 
           {/* Project 1 */}
 
-          <div className="card project-showcase">
-
+          <div
+            className="card project-showcase"
+            onClick={() => setSelectedProject(business1)}
+          >
             <img src={business1} alt="Business Project" className="project-banner" />
 
             <div className="project-content">
@@ -291,21 +295,44 @@ function App() {
               </div>
 
               <div className="mini-gallery">
-                <img src={business2} alt="" />
-                <img src={business3} alt="" />
-                <img src={business4} alt="" />
+                <img
+                  src={business2}
+                  alt=""
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedProject(business2);
+                  }}
+                />
+
+                <img
+                  src={business3}
+                  alt=""
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedProject(business3);
+                  }}
+                />
+
+                <img
+                  src={business4}
+                  alt=""
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedProject(business4);
+                  }}
+                />
               </div>
 
             </div>
 
           </div>
 
-          <br />
-
           {/* Project 2 */}
 
-          <div className="card project-showcase">
-
+          <div
+            className="card project-showcase"
+            onClick={() => setSelectedProject(dashboard1)}
+          >
             <img src={dashboard1} alt="Dashboard" className="project-banner" />
 
             <div className="project-content">
@@ -325,7 +352,14 @@ function App() {
               </div>
 
               <div className="mini-gallery">
-                <img src={dashboard2} alt="" />
+                <img
+                  src={dashboard2}
+                  alt=""
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedProject(dashboard2);
+                  }}
+                />
               </div>
 
             </div>
@@ -342,7 +376,9 @@ function App() {
 
         <div className="certificate-grid">
 
-          <div className="certificate-card">
+          <div
+            className="certificate-card"
+            onClick={() => setSelectedCertificate(ibmAI)}            >
             <img src={ibmAI} alt="IBM AI" />
             <h3>IBM AI Certificate</h3>
             <p>
@@ -351,7 +387,9 @@ function App() {
             </p>
           </div>
 
-          <div className="certificate-card">
+          <div
+            className="certificate-card"
+            onClick={() => setSelectedCertificate(ibmCertificate)}          >
             <img src={ibmCertificate} alt="IBM Certificate" />
             <h3>IBM Professional Certificate</h3>
             <p>
@@ -360,7 +398,9 @@ function App() {
             </p>
           </div>
 
-          <div className="certificate-card">
+          <div
+            className="certificate-card"
+            onClick={() => setSelectedCertificate(internship1)}          >
             <img src={internship1} alt="Internship 1" />
             <h3>Frontend Development Internship</h3>
             <p>
@@ -369,7 +409,9 @@ function App() {
             </p>
           </div>
 
-          <div className="certificate-card">
+          <div
+            className="certificate-card"
+            onClick={() => setSelectedCertificate(internship2)}          >
             <img src={internship2} alt="Internship 2" />
             <h3>Full Stack Internship</h3>
             <p>
@@ -378,7 +420,9 @@ function App() {
             </p>
           </div>
 
-          <div className="certificate-card">
+          <div
+            className="certificate-card"
+            onClick={() => setSelectedCertificate(alpha)}          >
             <img src={alpha} alt="Alpha" />
             <h3>Alpha Program</h3>
             <p>
@@ -386,8 +430,9 @@ function App() {
               program focused on software development concepts.
             </p>
           </div>
-
-          <div className="certificate-card">
+          <div
+            className="certificate-card"
+            onClick={() => setSelectedCertificate(delta)}          >
             <img src={delta} alt="Delta" />
             <h3>Delta Program</h3>
             <p>
@@ -395,7 +440,6 @@ function App() {
               skills and real-world implementation techniques.
             </p>
           </div>
-
         </div>
       </section>
 
@@ -412,8 +456,6 @@ function App() {
             Successfully placed through campus recruitment
             process with a package of 7 LPA.
           </p>
-
-          <br />
 
           <h3>Professional Certifications</h3>
 
@@ -443,7 +485,7 @@ function App() {
             {" "}
             <a
               href="https://www.linkedin.com/in/anjali-patel-04aaa5327"
-              target="_blank"
+              target="_self"
               rel="noreferrer"
             >
               View LinkedIn Profile
@@ -452,6 +494,61 @@ function App() {
 
         </div>
       </section>
+
+      {/* Certificate Popup */}
+
+      {selectedCertificate && (
+        <div
+          className="certificate-modal"
+          onClick={() => setSelectedCertificate(null)}
+        >
+          <div
+            className="certificate-popup"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="close-btn"
+              onClick={() => setSelectedCertificate(null)}
+            >
+              ✖
+            </button>
+
+            <img
+              src={selectedCertificate}
+              alt="Certificate"
+              className="popup-certificate-img"
+            />
+          </div>
+        </div>
+      )}
+
+      {/* Project Popup */}
+
+      {selectedProject && (
+        <div
+          className="certificate-modal"
+          onClick={() => setSelectedProject(null)}
+        >
+          <div
+            className="certificate-popup"
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className="close-btn"
+              onClick={() => setSelectedProject(null)}
+            >
+              ✖
+            </button>
+
+            <img
+              src={selectedProject}
+              alt="Project"
+              className="popup-certificate-img"
+            />
+          </div>
+        </div>
+      )}
+
 
       {/* Footer */}
 

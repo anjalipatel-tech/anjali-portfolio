@@ -79,7 +79,7 @@ NAVBAR
   backdrop-filter: blur(18px);
 
   width: 100%;
-  padding: 18px 0;
+  padding: 8px 0;
 
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
@@ -142,17 +142,18 @@ HERO SECTION
   font-weight: 800;
 
   margin-top: 25px;
+  margin-bottom: 25px;
 
   letter-spacing: 2px;
+  line-height: 1.1;
+
 }
 
 .hero h2 {
   font-size: 32px;
-
-  color: #8b5cf6;
-
-  margin-top: 10px;
-  margin-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 35px;
+  color: #9b6cff;
 }
 
 .hero p {
@@ -486,7 +487,7 @@ PROJECTS
 
 .project-showcase {
   padding: 0;
-
+  cursor: pointer;
   overflow: hidden;
 }
 
@@ -780,88 +781,156 @@ MOBILE RESPONSIVE
   cursor: pointer;
 }
 
-@media (max-width:768px){
+@media (max-width:768px) {
 
-  .menu-icon{
-    display:block;
-    font-size:35px;
-    color:white;
-    cursor:pointer;
-    text-align:right;
-    padding:15px 25px;
+  .menu-icon {
+    display: block;
+    font-size: 35px;
+    color: white;
+    cursor: pointer;
+    text-align: right;
+    padding: 3px 1px;
   }
 
-  .nav-links{
-    display:none !important;
+  .nav-links {
+    display: none !important;
 
-    position:fixed;
-    top:80px;
-    right:20px;
+    position: fixed;
+    top: 80px;
+    right: 20px;
 
-    width:220px;
+    width: 220px;
 
-    background:rgba(10,15,35,0.95);
-    backdrop-filter:blur(20px);
+    background: rgba(10, 15, 35, 0.95);
+    backdrop-filter: blur(20px);
 
-    border-radius:15px;
-    padding:20px;
+    border-radius: 15px;
+    padding: 20px;
 
-    flex-direction:column;
-    align-items:center;
+    flex-direction: column;
+    align-items: center;
 
-    gap:20px;
+    gap: 20px;
 
-    z-index:9999;
+    z-index: 9999;
 
-    box-shadow:0 0 25px rgba(138,92,246,.4);
+    box-shadow: 0 0 25px rgba(138, 92, 246, .4);
   }
 
-  .nav-links.active{
-    display:flex !important;
-    -webkit-tap-highlight-color: rgba(139,92,246,.3);
-  transition:all .25s ease;
+  .nav-links.active {
+    display: flex !important;
   }
 
-  .nav-links li{
-    width:100%;
-    text-align:center;
+  .nav-links li {
+    width: 100%;
+    text-align: center;
   }
 
- .nav-links a{
-  display:block;
-  width:100%;
+  .nav-links a {
+    display: block;
+    width: 100%;
 
-  padding:12px 15px;
+    padding: 12px 15px;
 
-  color:white;
-  text-decoration:none;
+    color: white;
+    text-decoration: none;
 
-  border-radius:10px;
+    border-radius: 10px;
 
-  -webkit-tap-highlight-color: rgba(139,92,246,.3);
+    -webkit-tap-highlight-color: rgba(139, 92, 246, .3);
 
-  transition:all .25s ease;
+    transition: all .25s ease;
+  }
+
+  .nav-links a:hover {
+    background: linear-gradient(90deg,
+        rgba(139, 92, 246, .25),
+        rgba(59, 130, 246, .15));
+
+    color: #ffffff;
+
+    transform: translateX(10px);
+
+    box-shadow: 0 0 15px rgba(139, 92, 246, .4);
+  }
+
+  .nav-links a:active {
+    background: rgba(139, 92, 246, .25);
+
+    transform: translateX(8px) scale(.97);
+
+    box-shadow: 0 0 15px rgba(139, 92, 246, .4);
+  }
 }
 
-.nav-links a:hover{
-  background:linear-gradient(
-    90deg,
-    rgba(139,92,246,.25),
-    rgba(59,130,246,.15)
-  );
-
-  color:#ffffff;
-
-  transform:translateX(10px);
-
-  box-shadow:0 0 15px rgba(139,92,246,.4);
+.certificate-card {
+  cursor: pointer;
 }
 
-.nav-links a:active{
-  background:rgba(139,92,246,.25);
+.certificate-modal {
+  position: fixed;
+  inset: 0;
 
-  transform:translateX(8px) scale(.97);
+  background: rgba(0, 0, 0, .75);
 
-  box-shadow:0 0 15px rgba(139,92,246,.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 10000;
 }
+
+.certificate-popup {
+  position: relative;
+
+  width: 90%;
+  max-width: 800px;
+  max-height: 90vh;
+  animation: popupShow .3s ease;
+
+  overflow: auto;
+
+  background: #111827;
+
+  border-radius: 20px;
+
+  padding: 20px;
+}
+
+.popup-certificate-img {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: contain;
+
+  border-radius: 12px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  border: none;
+  background: none;
+
+  color: white;
+
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #9b6cff;
+}
+
+@keyframes popupShow {
+  from {
+    transform: scale(.9);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
