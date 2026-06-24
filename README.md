@@ -1,16 +1,46 @@
-# React + Vite
+# Anjali Patel Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Live Demo
 
-Currently, two official plugins are available:
+🌐 https://anjali-portfolio-azure.vercel.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## About The Project
 
-## React Compiler
+This is my personal portfolio website developed to showcase my skills, projects, certifications, education and professional experience.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The website is fully responsive and optimized for both desktop and mobile devices.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* Responsive Design
+* Modern UI/UX
+* Mobile Navigation Menu
+* Project Gallery Popup
+* Certificate Viewer Popup
+* Education Certificate Viewer
+* Contact Section
+* Resume Access
+
+## Tech Stack
+
+* React.js
+* Vite
+* JavaScript
+* HTML5
+* CSS3
+
+## Featured Projects
+
+### Enterprise Admin Dashboard Platform
+
+Professional dashboard system for analytics, reporting and business management.
+
+### Corporate Business & Recruitment Portal
+
+Modern recruitment platform for managing services, appointments and client interactions.
+
+## Author
+
+Anjali Patel
+
+Full Stack Developer | MERN Stack Developer
