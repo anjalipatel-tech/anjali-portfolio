@@ -185,7 +185,7 @@ function App() {
         </div>
       </section>
 
-           {/* Experience Timeline */}
+      {/* Experience Timeline */}
 
       <section id="experience" className="section">
         <h2>Experience Timeline</h2>
@@ -197,7 +197,7 @@ function App() {
           <p>
             Websphere Solution | 2 Months
           </p>
-          <br/>
+          <br />
 
           <h3>Full Stack Development Internship</h3>
 
@@ -258,31 +258,6 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* Skills */}
-
-      <section id="skills" className="section">
-        <h2>Technical Skills</h2>
-
-        <div className="skills-grid">
-          <span>HTML5</span>
-          <span>CSS3</span>
-          <span>JavaScript</span>
-          <span>React.js</span>
-          <span>Node.js</span>
-          <span>Express.js</span>
-          <span>MongoDB</span>
-          <span>REST APIs</span>
-          <span>Bootstrap</span>
-          <span>Git</span>
-          <span>Redux</span>
-          <span>Tailwind CSS</span>
-          <span>MySQL</span>
-          <span>GitHub</span>
-          <span>Postman</span>
-        </div>
-      </section>
-
 
       {/* Projects Section */}
 
@@ -399,6 +374,29 @@ function App() {
 
           <div
             className="certificate-card"
+            onClick={() => setSelectedCertificate(internship1)}          >
+            <img src={internship1} alt="Internship 1" />
+            <h3>Full Stack Development Internship</h3>
+            <p>
+              Completed practical frontend development training with
+              hands-on project experience and responsive web design.
+            </p>
+          </div>
+
+          <div
+            className="certificate-card"
+            onClick={() => setSelectedCertificate(internship2)}          >
+            <img src={internship2} alt="Internship 2" />
+            <h3> Software Development Internship</h3>
+            <p>
+              Worked on full stack development using React, Node.js,
+              MongoDB and REST APIs.
+            </p>
+          </div>
+
+
+          <div
+            className="certificate-card"
             onClick={() => setSelectedCertificate(ibmAI)}            >
             <img src={ibmAI} alt="IBM AI" />
             <h3>IBM AI Certificate</h3>
@@ -419,27 +417,6 @@ function App() {
             </p>
           </div>
 
-          <div
-            className="certificate-card"
-            onClick={() => setSelectedCertificate(internship1)}          >
-            <img src={internship1} alt="Internship 1" />
-            <h3>Full Stack Development Internship</h3>
-            <p>
-              Completed practical frontend development training with
-              hands-on project experience and responsive web design.
-            </p>
-          </div>
-
-          <div
-            className="certificate-card"
-            onClick={() => setSelectedCertificate(internship2)}          >
-            <img src={internship2} alt="Internship 2" />
-            <h3> Software Development Internship</h3>
-            <p>
-              Worked on full stack development using React, Node.js,
-              MongoDB and REST APIs.
-            </p>
-          </div>
 
           <div
             className="certificate-card"
@@ -461,6 +438,30 @@ function App() {
               skills and real-world implementation techniques.
             </p>
           </div>
+        </div>
+      </section>
+
+      {/* Skills */}
+
+      <section id="skills" className="section">
+        <h2>Technical Skills</h2>
+
+        <div className="skills-grid">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>JavaScript</span>
+          <span>React.js</span>
+          <span>Node.js</span>
+          <span>Express.js</span>
+          <span>MongoDB</span>
+          <span>REST APIs</span>
+          <span>Bootstrap</span>
+          <span>Git</span>
+          <span>Redux</span>
+          <span>Tailwind CSS</span>
+          <span>MySQL</span>
+          <span>GitHub</span>
+          <span>Postman</span>
         </div>
       </section>
 
@@ -569,7 +570,6 @@ function App() {
           </div>
         </div>
       )}
-
 
       {/* Footer */}
 
