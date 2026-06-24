@@ -157,11 +157,15 @@ HERO SECTION
 }
 
 .hero p {
-  max-width: 850px;
+  max-width: 900px;
+
+  margin: 0 auto;
+
+  text-align: center;
 
   line-height: 1.8;
 
-  font-size: 22px;
+  font-size: 20px;
 }
 
 /* =========================
@@ -220,7 +224,7 @@ SECTION COMMON
 ========================= */
 
 .section {
-  padding: 90px 0;
+  padding: 40px 0;
 }
 
 .section h2 {
@@ -274,7 +278,7 @@ STATS SECTION
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 25px;
-  margin: 20px 0 80px;
+  margin: 0px 0 15px;
 }
 
 .stat-card {
@@ -712,7 +716,8 @@ MOBILE RESPONSIVE
 
   .hero {
     min-height: auto;
-    padding: 60px 15px;
+      padding:30px 15px 20px;
+
   }
 
   .hero h1 {
@@ -783,6 +788,25 @@ MOBILE RESPONSIVE
 
 @media (max-width:768px) {
 
+  .section{
+  padding:30px 0;
+}
+
+.section h2{
+  margin-bottom:30px;
+}
+
+.experience-timeline{
+  margin-top:20px;
+}
+
+.card,
+.edu-card,
+.certificate-card,
+.skill-card{
+  margin-bottom:12px;
+}
+
   .menu-icon {
     display: block;
     font-size: 35px;
@@ -791,6 +815,29 @@ MOBILE RESPONSIVE
     text-align: right;
     padding: 3px 1px;
   }
+
+  .skills-grid{
+  display:grid;
+  grid-template-columns:repeat(2, 1fr);
+  gap:15px;
+}
+
+.skill-card{
+  min-height:80px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+
+  padding:15px;
+
+  border-radius:18px;
+}
+
+.skill-card h3{
+  font-size:18px;
+  text-align:center;
+}
 
   .nav-links {
     display: none !important;
@@ -861,6 +908,72 @@ MOBILE RESPONSIVE
 
     box-shadow: 0 0 15px rgba(139, 92, 246, .4);
   }
+
+  .edu-btn {
+    width: 100%;
+
+    max-width: 220px;
+
+    margin-top: 15px;
+
+    padding: 12px 15px;
+
+    font-size: 14px;
+
+    border-radius: 12px;
+  }
+
+
+  .education-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .edu-card {
+    padding: 25px 20px;
+  }
+
+  .edu-card h3 {
+    font-size: 24px;
+  }
+
+  .edu-card p {
+    font-size: 16px;
+  }
+}
+
+.edu-btn {
+  margin-top: 18px;
+
+  padding: 12px 28px;
+
+  border: none;
+  border-radius: 14px;
+
+  background: linear-gradient(135deg,
+      #8b5cf6,
+      #a855f7);
+
+  color: white;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all .3s ease;
+
+  box-shadow: 0 4px 15px rgba(139, 92, 246, .35);
+}
+
+.edu-btn:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 8px 25px rgba(139, 92, 246, .5);
+}
+
+.edu-btn:active {
+  transform: scale(.97);
 }
 
 .certificate-card {

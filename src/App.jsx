@@ -19,6 +19,10 @@ import internship1 from "./assets/Internship1.jpeg";
 import internship2 from "./assets/Internship2.jpeg";
 import resume from "./assets/resume.pdf";
 
+import graduationCertificate from "./assets/Graduation completion certificate.jpeg";
+import class12Certificate from "./assets/12th completion certificate.jpeg";
+import class10Certificate from "./assets/10th completion certificate.jpeg";
+
 function App() {
 
   const [menuOpen, setMenuOpen] = useState(false);
@@ -168,20 +172,39 @@ function App() {
 
         <div className="card">
           <p>
-            I am a Computer Science & Engineering graduate from
-            Kashi Institute of Technology, Varanasi.
+            I'm a Computer Science & Engineering graduate with hands-on experience in Full Stack Web Development. Skilled in building responsive, scalable, and user-focused web applications using React.js, Node.js, Express.js, and MongoDB.
           </p>
 
           <p>
-            Passionate about creating responsive web applications,
-            modern dashboards and full-stack solutions using the
-            latest development technologies.
+            Completed professional internships and developed real-world projects, including an Enterprise Admin Dashboard Platform and a Corporate Business & Recruitment Portal. Passionate about solving problems through technology, learning modern development practices, and creating impactful digital solutions.
           </p>
 
           <p>
-            My goal is to build scalable and user-friendly digital
-            products that solve real-world problems efficiently.
+            Currently seeking opportunities to contribute, grow, and deliver high-quality software solutions in a dynamic development environment.
           </p>
+        </div>
+      </section>
+
+           {/* Experience Timeline */}
+
+      <section id="experience" className="section">
+        <h2>Experience Timeline</h2>
+
+        <div className="card">
+
+          <h3> Software Development Internship</h3>
+
+          <p>
+            Websphere Solution | 2 Months
+          </p>
+          <br/>
+
+          <h3>Full Stack Development Internship</h3>
+
+          <p>
+            Metconnect Infotech Pvt. Ltd. | 3 Months
+          </p>
+
         </div>
       </section>
 
@@ -194,9 +217,16 @@ function App() {
 
           <div className="edu-card">
             <h3>B.Tech (CSE)</h3>
-            <p>Kashi Institute of Technology</p>
+            <p>Kashi Institute of Technology (KIT)</p>
             <p>2022 - 2026</p>
             <p>CGPA: 7.5</p>
+
+            <button
+              className="edu-btn"
+              onClick={() => setSelectedCertificate(graduationCertificate)}
+            >
+              View Certificate
+            </button>
           </div>
 
           <div className="edu-card">
@@ -204,6 +234,13 @@ function App() {
             <p>Lal Bahadur Shastri Inter College</p>
             <p>2020 - 2021</p>
             <p>76.66%</p>
+
+            <button
+              className="edu-btn"
+              onClick={() => setSelectedCertificate(class12Certificate)}
+            >
+              View Certificate
+            </button>
           </div>
 
           <div className="edu-card">
@@ -211,8 +248,14 @@ function App() {
             <p>Lal Bahadur Shastri Inter College</p>
             <p>2018 - 2019</p>
             <p>83.33%</p>
-          </div>
 
+            <button
+              className="edu-btn"
+              onClick={() => setSelectedCertificate(class10Certificate)}
+            >
+              View Certificate
+            </button>
+          </div>
         </div>
       </section>
 
@@ -237,28 +280,6 @@ function App() {
           <span>MySQL</span>
           <span>GitHub</span>
           <span>Postman</span>
-        </div>
-      </section>
-
-      {/* Experience Timeline */}
-
-      <section id="experience" className="section">
-        <h2>Experience Timeline</h2>
-
-        <div className="card">
-
-          <h3>Frontend Development Internship</h3>
-
-          <p>
-            Websphere Solution | 3 Months
-          </p>
-
-          <h3>Full Stack Development Internship</h3>
-
-          <p>
-            Metconnect Infotech Pvt. Ltd. | 3 Months
-          </p>
-
         </div>
       </section>
 
@@ -402,7 +423,7 @@ function App() {
             className="certificate-card"
             onClick={() => setSelectedCertificate(internship1)}          >
             <img src={internship1} alt="Internship 1" />
-            <h3>Frontend Development Internship</h3>
+            <h3>Full Stack Development Internship</h3>
             <p>
               Completed practical frontend development training with
               hands-on project experience and responsive web design.
@@ -413,7 +434,7 @@ function App() {
             className="certificate-card"
             onClick={() => setSelectedCertificate(internship2)}          >
             <img src={internship2} alt="Internship 2" />
-            <h3>Full Stack Internship</h3>
+            <h3> Software Development Internship</h3>
             <p>
               Worked on full stack development using React, Node.js,
               MongoDB and REST APIs.
