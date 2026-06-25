@@ -120,7 +120,7 @@ function App() {
 
           <a
             href="https://www.linkedin.com/in/anjali-patel-04aaa5327"
-            target="_self"
+            target="_blank"
             rel="noreferrer"
             className="hero-btn"
           >
@@ -140,6 +140,15 @@ function App() {
             className="hero-btn"
           >
             Email
+          </a>
+
+          <a
+            href="https://github.com/anjalipatel-tech"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-btn"
+          >
+            GitHub
           </a>
 
         </div>
@@ -283,11 +292,16 @@ function App() {
                 appointments and client interactions.
               </p>
 
-              <div className="project-tags">
-                <span>React</span>
-                <span>Node.js</span>
-                <span>MongoDB</span>
-                <span>REST API</span>
+              <div className="project-actions">
+                <a
+                  href="https://corporate-business-recruitment-portal.netlify.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="live-demo-btn"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  🚀 Live Demo
+                </a>
               </div>
 
               <div className="mini-gallery">
