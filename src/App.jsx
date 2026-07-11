@@ -353,6 +353,17 @@ function App() {
                 Professional dashboard system for business analytics,
                 customer insights, reporting and management.
               </p>
+              <div className="project-actions">
+                <a
+                  href="https://enterprise-admin-dashboard-seven.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="live-demo-btn"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  🚀 Live Demo
+                </a>
+              </div>
 
               <div className="project-tags">
                 <span>React</span>
