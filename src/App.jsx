@@ -169,7 +169,7 @@ function App() {
         </a>
 
         <a href="#projects" className="stat-card">
-          <h3>2+</h3>
+          <h3>3+</h3>
           <p>Major Projects</p>
         </a>
 
