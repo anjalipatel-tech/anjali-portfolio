@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
 
-*{
+* {
   font-family: 'Outfit', sans-serif;
 }
+
 /* =========================
 RESET & GLOBAL
 ========================= */
@@ -288,26 +289,47 @@ STATS SECTION
 
 .stat-card {
   background: rgba(255, 255, 255, .08);
-
   backdrop-filter: blur(18px);
-
   border: 1px solid rgba(255, 255, 255, .10);
-
   border-radius: 25px;
-
   padding: 35px;
-
   text-align: center;
-
   text-decoration: none;
-
   color: white;
-
   position: relative;
-
   overflow: hidden;
-
   transition: .35s ease;
+
+  /* Add these */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.stat-icon {
+  font-size: 42px;
+  margin-bottom: 12px;
+  color: #8b5cf6;
+  transition: all 0.35s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+}
+
+.stat-card:hover .stat-icon {
+  transform: translateY(-5px) scale(1.15);
+  color: #00d9ff;
+}
+
+.stat-card h3 {
+  margin: 0;
+}
+
+.stat-card p {
+  margin: 0;
 }
 
 .stat-card:hover {
@@ -1063,6 +1085,7 @@ MOBILE RESPONSIVE
     opacity: 1;
   }
 }
+
 .social-buttons {
   display: flex;
   gap: 15px;
@@ -1084,6 +1107,7 @@ MOBILE RESPONSIVE
   transform: translateY(-4px);
   box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
 }
+
 .live-demo-btn {
   display: inline-block;
   margin-top: 15px;
@@ -1100,25 +1124,26 @@ MOBILE RESPONSIVE
   transform: translateY(-3px);
   box-shadow: 0 8px 20px rgba(168, 85, 247, 0.4);
 }
+
 @media (max-width: 768px) {
 
-  .buttons{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    gap:15px;
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
   }
 
   .hero-btn,
-  .social-btn{
-    width:220px;
-    height:55px;
+  .social-btn {
+    width: 220px;
+    height: 55px;
 
-    display:flex;
-    align-items:center;
-    justify-content:center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-    box-sizing:border-box;
+    box-sizing: border-box;
   }
 
 }

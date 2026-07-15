@@ -1,6 +1,10 @@
 import { useState } from "react";
 import "./App.css";
-
+import {
+  FaBriefcase,
+  FaLaptopCode,
+  FaAward
+} from "react-icons/fa";
 import profile from "./assets/Your Photo.png";
 
 import business1 from "./assets/Business SS 1.png";
@@ -164,16 +168,19 @@ function App() {
       <section className="stats-section">
 
         <a href="#experience" className="stat-card">
+          <FaBriefcase className="stat-icon" />
           <h3>2+</h3>
           <p>Internships</p>
         </a>
 
         <a href="#projects" className="stat-card">
+          <FaLaptopCode className="stat-icon" />
           <h3>3+</h3>
           <p>Major Projects</p>
         </a>
 
         <a href="#certificates" className="stat-card">
+          <FaAward className="stat-icon" />
           <h3>6+</h3>
           <p>Certificates</p>
         </a>
@@ -293,13 +300,17 @@ function App() {
 
             <div className="project-content">
 
-              <h3>🍽️ AI Recipe Generator</h3>
+              <h3>AI Recipe Generator</h3>
 
               <p>
-                An AI-powered full-stack MERN application that transforms food
-                images into complete recipes using Google GenAI. Users can
-                generate recipes, upload their own recipes, securely register,
-                login, and manage recipes with JWT authentication.
+                Developed an AI-powered full-stack MERN application that converts food
+                images into detailed recipes using Google Gemini AI. The platform allows
+                users to upload food images, generate complete recipes with ingredients
+                and cooking instructions, upload and share their own recipes, and securely
+                manage their accounts through JWT authentication. Built with a responsive
+                and user-friendly interface, the application delivers a seamless cooking
+                experience while showcasing the integration of modern AI technology with
+                full-stack web development.
               </p>
 
               <div className="project-actions">
@@ -328,8 +339,8 @@ function App() {
               </div>
 
               <div className="project-tech">
-  <strong>Tech Stack:</strong> React • Node.js • Express.js • MongoDB • Google GenAI • JWT
-</div>
+                <strong>Tech Stack:</strong> React • Node.js • Express.js • MongoDB • Google GenAI • JWT
+              </div>
 
               <div className="mini-gallery">
 
@@ -378,9 +389,11 @@ function App() {
               <h3>Corporate Business & Recruitment Portal</h3>
 
               <p>
-                A modern recruitment and business platform developed
-                for managing company services, recruitment solutions,
-                appointments and client interactions.
+                Developed a responsive corporate business and recruitment platform that
+                connects companies with job seekers while showcasing business services.
+                The platform enables users to explore company offerings, apply for job
+                opportunities, schedule appointments, and communicate efficiently through
+                a modern, secure, and user-friendly interface.
               </p>
 
               <div className="project-actions">
@@ -405,8 +418,8 @@ function App() {
                 </a>
               </div>
               <div className="project-tech">
-  <strong>Tech Stack:</strong> React • Node.js • Express.js • MongoDB • Google GenAI • JWT
-</div>
+                <strong>Tech Stack:</strong> HTML5 • CSS3 • JavaScript • Bootstrap 5 • SCSS • Netlify
+              </div>
 
               <div className="mini-gallery">
                 <img
@@ -454,8 +467,11 @@ function App() {
               <h3>Enterprise Admin Dashboard Platform</h3>
 
               <p>
-                Professional dashboard system for business analytics,
-                customer insights, reporting and management.
+                Developed a modern and responsive enterprise admin dashboard that enables
+                businesses to efficiently manage customers, employees, and daily operations.
+                The platform provides real-time analytics, interactive charts, performance
+                tracking, report generation, and secure authentication, helping organizations
+                make informed decisions through a clean and user-friendly interface.
               </p>
               <div className="project-actions">
                 <a
@@ -479,8 +495,8 @@ function App() {
                 </a>
               </div>
               <div className="project-tech">
-  <strong>Tech Stack:</strong> React • Node.js • Express.js • MongoDB • Google GenAI • JWT
-</div>
+                <strong>Tech Stack:</strong> React js • Vite • JavaScript • Chart.js • Vercel • React Bootstrap
+              </div>
 
               <div className="mini-gallery">
                 <img
