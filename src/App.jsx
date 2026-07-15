@@ -11,6 +11,11 @@ import business4 from "./assets/Business SS 4.png";
 import dashboard1 from "./assets/Dashboard SS 1.png";
 import dashboard2 from "./assets/Dashboard SS 2.png";
 
+import recipe1 from "./assets/recipe1.png";
+import recipe2 from "./assets/recipe2.png";
+import recipe3 from "./assets/recipe3.png";
+import recipe4 from "./assets/recipe4.png";
+
 import alpha from "./assets/Alpha.jpeg";
 import delta from "./assets/Delta.jpeg";
 import ibmAI from "./assets/IBM AI.jpeg";
@@ -278,6 +283,92 @@ function App() {
 
           <div
             className="card project-showcase"
+            onClick={() => setSelectedProject(recipe1)}
+          >
+            <img
+              src={recipe1}
+              alt="AI Recipe Generator"
+              className="project-banner"
+            />
+
+            <div className="project-content">
+
+              <h3>🍽️ AI Recipe Generator</h3>
+
+              <p>
+                An AI-powered full-stack MERN application that transforms food
+                images into complete recipes using Google GenAI. Users can
+                generate recipes, upload their own recipes, securely register,
+                login, and manage recipes with JWT authentication.
+              </p>
+
+              <div className="project-actions">
+
+                <a
+                  href="https://ai-recipe-generator-gamma.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="live-demo-btn"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  🚀 Live Demo
+                </a>
+
+                <a
+                  href="https://github.com/anjalipatel-tech/AI-Recipe-Generator"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="live-demo-btn"
+                  style={{ marginLeft: "10px" }}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  💻 GitHub
+                </a>
+
+              </div>
+
+              <div className="project-tech">
+  <strong>Tech Stack:</strong> React • Node.js • Express.js • MongoDB • Google GenAI • JWT
+</div>
+
+              <div className="mini-gallery">
+
+                <img
+                  src={recipe2}
+                  alt=""
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedProject(recipe2);
+                  }}
+                />
+
+                <img
+                  src={recipe3}
+                  alt=""
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedProject(recipe3);
+                  }}
+                />
+
+                <img
+                  src={recipe4}
+                  alt=""
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    setSelectedProject(recipe4);
+                  }}
+                />
+
+              </div>
+
+            </div>
+          </div>
+
+          {/* Project 2 */}
+
+          <div
+            className="card project-showcase"
             onClick={() => setSelectedProject(business1)}
           >
             <img src={business1} alt="Business Project" className="project-banner" />
@@ -302,7 +393,20 @@ function App() {
                 >
                   🚀 Live Demo
                 </a>
+                <a
+                  href="https://github.com/anjalipatel-tech/anjali-portfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="live-demo-btn"
+                  style={{ marginLeft: "10px" }}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  💻 GitHub
+                </a>
               </div>
+              <div className="project-tech">
+  <strong>Tech Stack:</strong> React • Node.js • Express.js • MongoDB • Google GenAI • JWT
+</div>
 
               <div className="mini-gallery">
                 <img
@@ -337,7 +441,7 @@ function App() {
 
           </div>
 
-          {/* Project 2 */}
+          {/* Project 3 */}
 
           <div
             className="card project-showcase"
@@ -363,14 +467,20 @@ function App() {
                 >
                   🚀 Live Demo
                 </a>
+                <a
+                  href="https://github.com/anjalipatel-tech/enterprise-admin-dashboard"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="live-demo-btn"
+                  style={{ marginLeft: "10px" }}
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  💻 GitHub
+                </a>
               </div>
-
-              <div className="project-tags">
-                <span>React</span>
-                <span>Dashboard</span>
-                <span>Analytics</span>
-                <span>Reports</span>
-              </div>
+              <div className="project-tech">
+  <strong>Tech Stack:</strong> React • Node.js • Express.js • MongoDB • Google GenAI • JWT
+</div>
 
               <div className="mini-gallery">
                 <img
@@ -386,6 +496,7 @@ function App() {
             </div>
 
           </div>
+
         </div>
 
       </section>
