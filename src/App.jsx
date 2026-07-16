@@ -26,7 +26,7 @@ import ibmAI from "./assets/IBM AI.jpeg";
 import ibmCertificate from "./assets/IBM Certificate.jpeg";
 import internship1 from "./assets/Internship1.jpeg";
 import internship2 from "./assets/Internship2.jpeg";
-import resume from "./assets/resume.pdf";
+import resume from "./assets/Anjali_Patel_Resume.pdf";
 
 import graduationCertificate from "./assets/Graduation completion certificate.jpeg";
 import class12Certificate from "./assets/12th completion certificate.jpeg";
